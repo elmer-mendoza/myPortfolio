@@ -1,0 +1,17 @@
+.sectionContainer {
+  max-width: 1000px;
+  margin:auto;
+  border:solid 1px red
+}
+
+.hero{
+  // background-image:radial-gradient(transparent,rgba(0, 0, 0, 0.507));
+  background-image:radial-gradient(transparent,rgba(0, 0, 0, 0.815)), url('../../assets/images/homepage.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height:100vh;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+}

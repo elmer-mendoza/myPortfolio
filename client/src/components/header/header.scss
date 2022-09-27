@@ -1,0 +1,69 @@
+.header {
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:15px 45px;
+  position:fixed;
+  color:white;
+  
+
+  &__logo {
+    font-size: 36px;
+    font-weight:500;
+    letter-spacing: 5px;
+    color: white;
+  }
+
+  &__menu {
+    cursor: pointer;
+    position: relative;
+  }
+}
+
+.hamburger,.closeMenu{
+  position:relative;
+  height:30px;
+  width:30px;
+  margin-right:20px;
+  animation: 350ms ease-out 0s 1 rotate;
+  // font-size:medium;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+// .hamburger-inner,
+// .hamburger-top,
+// .hamburger-bottom
+//   {
+//      width: 35px;
+//      height: 3px;
+//      display: block;
+//      margin-top: 7px;
+//      border-radius: 4px;
+//      background-color: white;
+//      transition-property: transform;
+//      transition-duration: 350ms;
+//      transition-timing-function: cubic-bezier(.3,0,.7,1);
+//      transform-origin: 50% 50%;
+//  }
+// .show {
+//     position:absolute;
+//     transform: rotateZ(45deg);
+//     width: 20px;
+//     transition-duration: 350ms;
+//  }
+// .hamburger-top.show,
+// .hamburger-bottom.show {
+//     transform: rotateZ(-45deg);
+// }
+

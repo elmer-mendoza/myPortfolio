@@ -1,0 +1,126 @@
+.navMenu {
+  position: absolute;
+  right:0;
+  background-color: rgba(49, 48, 47, 0.85);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
+  padding: 20px;
+  padding-left: 40px;
+  transition-duration: 350ms;
+  // animation: 350ms ease-out 0s 1 slideInFromRight;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    // border:1px solid red;
+    // animation: 350ms ease-out 0s 1 slideInFromRight;
+
+     &:hover .subMenu ,.show
+
+  /* hover on mobile */
+  // ,
+  // .navMenu__container:focus .subMenu,
+  // .navMenu__container:active .subMenu 
+  
+    {
+        visibility: visible;
+        transform: translateX(0px);
+        opacity: 1;
+      }
+  }
+
+  &__title  {
+    animation: 350ms ease-out 0s 1 slideInFromRight;
+    display: flex;
+    padding:10px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    color:white;
+    font-size: 24px;
+    transition-duration: 150ms;
+    // border:1px solid red;
+
+    &:hover {
+      transform: scale(1.1);
+      color:rgb(207, 207, 212);
+      text-decoration: underline;
+      text-underline-offset:10px;
+    }
+   
+  
+  }
+
+  &__icon {
+    margin-top: 5px;
+    margin-right: 10px;
+
+  }
+  
+}
+
+
+.subMenu {
+  z-index: 10;
+  position: absolute;
+  padding:30px;
+  // padding-right:30px;
+  top:-10px;
+  right:175px;
+  background-color: rgba(61, 59, 57, 0.85);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
+  visibility: hidden;
+  transform: translateX(50px);
+  transition-timing-function: ease-in;
+  // transition-timing-function: ease-in;
+  // transition-timing-function: cubic-bezier(0.42, 0, 1, 5);
+  transition: 0s;
+  transition-duration: 350ms;
+  transition-delay:350ms;
+  opacity: 0;
+
+  &__title {
+    position: relative;
+  }
+
+  &__arrowIcon {
+    position: absolute;
+    margin-left:60px;
+    opacity:0;
+    transition-duration: 1350ms;
+    // animation: 350ms ease-out 0s 1 slideInFromRight;
+  }
+
+}
+
+.main:hover .subMenu__arrowIcon {
+  margin-left:20px;
+  opacity:1;
+  transform: scale(1.2);
+  // transform: scaleX(1.5);
+
+}
+
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(30%);
+      // transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      // transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
+/* hover on mobile */
+//   @media(hover: hover) and (pointer: fine) {
+//     .navMenu__container:hover .subMenu {
+//       visibility: visible;
+//       transform: translateX(0px);
+//       opacity: 1;
+//     }
+// }
+

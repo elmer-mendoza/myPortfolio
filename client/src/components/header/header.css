@@ -1,0 +1,63 @@
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 45px;
+  position: fixed;
+  color: white;
+}
+
+.header__logo {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: white;
+}
+
+.header__menu {
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger, .closeMenu {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  -webkit-animation: 350ms ease-out 0s 1 rotate;
+          animation: 350ms ease-out 0s 1 rotate;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=header.css.map */
