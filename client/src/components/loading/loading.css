@@ -1,0 +1,11 @@
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 50px;
+  color: blue;
+}/*# sourceMappingURL=loading.css.map */

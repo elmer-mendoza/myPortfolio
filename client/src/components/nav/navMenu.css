@@ -1,51 +1,39 @@
 .navMenu {
   position: absolute;
   right: 0;
-  background-color: rgba(49, 48, 47, 0.85);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
   padding: 20px;
   padding-left: 40px;
-  -webkit-transition-duration: 350ms;
-          transition-duration: 350ms;
+  transition-duration: 350ms;
 }
-
 .navMenu__container {
   position: relative;
   width: 100%;
   padding: 10px;
 }
-
 .navMenu__container:hover .subMenu, .navMenu__container .show {
   visibility: visible;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  transform: translateX(0px);
   opacity: 1;
 }
-
 .navMenu__title {
   -webkit-animation: 350ms ease-out 0s 1 slideInFromRight;
           animation: 350ms ease-out 0s 1 slideInFromRight;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 10px;
   margin-bottom: 5px;
   text-transform: capitalize;
   color: white;
   font-size: 24px;
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
+  transition-duration: 150ms;
 }
-
 .navMenu__title:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  color: #cfcfd4;
+  transform: scale(1.1);
+  color: rgb(207, 207, 212);
   text-decoration: underline;
   text-underline-offset: 10px;
 }
-
 .navMenu__icon {
   margin-top: 5px;
   margin-right: 10px;
@@ -57,67 +45,51 @@
   padding: 30px;
   top: -10px;
   right: 175px;
-  background-color: rgba(61, 59, 57, 0.85);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
   visibility: hidden;
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  -webkit-transition: 0s;
+  transform: translateX(50px);
+  transition-timing-function: ease-in;
   transition: 0s;
-  -webkit-transition-duration: 350ms;
-          transition-duration: 350ms;
-  -webkit-transition-delay: 350ms;
-          transition-delay: 350ms;
+  transition-duration: 350ms;
+  transition-delay: 350ms;
   opacity: 0;
 }
-
 .subMenu__title {
   position: relative;
 }
-
 .subMenu__arrowIcon {
   position: absolute;
   margin-left: 60px;
   opacity: 0;
-  -webkit-transition-duration: 1350ms;
-          transition-duration: 1350ms;
+  transition-duration: 1350ms;
 }
 
 .main:hover .subMenu__arrowIcon {
   margin-left: 20px;
   opacity: 1;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 @-webkit-keyframes slideInFromRight {
   0% {
-    -webkit-transform: translateX(30%);
-            transform: translateX(30%);
+    transform: translateX(30%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes slideInFromRight {
   0% {
-    -webkit-transform: translateX(30%);
-            transform: translateX(30%);
+    transform: translateX(30%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
-/* hover on mobile */
-/*# sourceMappingURL=navMenu.css.map */
+/* hover on mobile *//*# sourceMappingURL=navMenu.css.map */

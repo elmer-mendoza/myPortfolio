@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import {Modal, ModalHeader, ModalBody,Form,Label,Input} from 'reactstrap';
+import { GET_REVIEWS } from '../graphql/query';
+import {useQuery} from '@apollo/client'
 import FilteredReviews from './FilteredReviews';
+import Loading from "../loading//Loading";
 
 const SortReviewsHeader =({numStar,sortDate})=> {
   const options = [...Array(5)].map((_,index)=>{
@@ -28,44 +31,54 @@ const SortReviewsHeader =({numStar,sortDate})=> {
 );
 }
 
-const ReviewsModal = (props) => {
+const ReviewsModal = () => {
+
+  const {error,loading,data} = useQuery(GET_REVIEWS)
+
 
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
-  const [filteredReviews,setFilteredReviews] = useState(props.reviews);
-  
+  const [filteredReviews,setFilteredReviews] = useState();
+
+  if(loading){ return <Loading/> } 
+  if(error){console.log(error)}
+  const {reviews} =data
+ 
+
   const sortDate =(e)=> {
-    
-    if (e.target.value === "Earliest") {
-      const sortedDate=filteredReviews.sort((a,b)=> a.date<b.date ? -1:1);
+     if (e.target.value === "Earliest") {
+      console.log("filtered",filteredReviews)
+      const sortedDate=[...filteredReviews].sort((a,b)=> a.date<b.date ? -1:1);
+      console.log(sortedDate)
       return setFilteredReviews([...sortedDate]);
     }
     if (e.target.value === "Latest") {
-      const sortedDate=filteredReviews.sort((a,b)=>a.date>b.date ? -1:1);
+      const sortedDate=[...filteredReviews].sort((a,b)=>a.date>b.date ? -1:1);
       return setFilteredReviews([...sortedDate]);
     }  
   }
   
   const numStar =  (e) => {
      if (e.target.value === "All") {
-      setFilteredReviews(props.reviews);
+      setFilteredReviews(reviews);
      }
     else{
-      let filterReviews = props.reviews.filter(review => review.numStar == e.target.value)
+      let filterReviews = reviews.filter(review => review.numStar == e.target.value)
       setFilteredReviews(filterReviews);
     }
   }
 
  const handleDisplayReview = ()=> {
-   props.fetchReviews()
-   toggle();
-   setFilteredReviews(props.reviews)
+  //  props.fetchReviews()
+  toggle();
+  setFilteredReviews(reviews)
+  console.log(filteredReviews)
 
  }
 
   return (
     <div>
-      <button className="btn button-glow btn-sm ml-3 my-auto" onClick={handleDisplayReview}>see reviews</button>
+      <button className="seeReviewBtn" onClick={handleDisplayReview}>see reviews</button>
       <Modal isOpen={modal} toggle={toggle} >
         <ModalHeader className="fixed-top bg-light" toggle={toggle} >
           <SortReviewsHeader sortDate={sortDate} numStar={numStar} />

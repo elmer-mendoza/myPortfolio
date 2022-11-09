@@ -21,8 +21,8 @@ const SubmitReviewForm = () => {
         const data = avatar;
         console.log(data);
         
-        // axios.post(`http://localhost:5001/api/reviews`,data)
-        axios.post(`https://resume-elmermendoza.herokuapp.com/api/reviews`,data)
+        axios.post(`http://localhost:5005/api/reviews`,data)
+        // axios.post(`https://resume-elmermendoza.herokuapp.com/api/reviews`,data)
         .then(res=> {console.log(res)})
         .catch(err=>console.log(err));
         alert(`Thank you for your review ${formData.name}`)
@@ -46,7 +46,7 @@ const SubmitReviewForm = () => {
             try {
             Resizer.imageFileResizer(
                 e.target.files[0], 100, 100, "JPEG", 50,0,
-                (uri) => { setNewImage( uri );},
+                (uri) => {console.log(uri); setNewImage( uri );},
                 "file", 100, 100
             );
             } catch (err) {

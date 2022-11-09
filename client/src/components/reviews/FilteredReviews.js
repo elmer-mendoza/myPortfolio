@@ -16,7 +16,7 @@ const FilteredReviews = (props) => {
                     console.log(review)
                     return (
                           <Col className="fback_card border border-primary  p-3 m-2 shadow" key={id}>
-                            <Row className="m-0  p-2">
+                            <div className="m-0  p-2">
                                 {[...Array(5)].map((_,index) => {
                                 let  i = index +=1;
                                 let color;
@@ -24,7 +24,7 @@ const FilteredReviews = (props) => {
                                 return  (
                                     <FaStar key={i} style={{color}}/>
                                 )})}
-                            </Row>
+                            </div>
                             <Row className="m-0 text-justify p-2">
                                     "{comment}" 
                             </Row>

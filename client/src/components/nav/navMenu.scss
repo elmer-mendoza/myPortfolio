@@ -1,7 +1,7 @@
 .navMenu {
   position: absolute;
   right:0;
-  background-color: rgba(49, 48, 47, 0.85);
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
   padding: 20px;
   padding-left: 40px;
@@ -66,7 +66,7 @@
   // padding-right:30px;
   top:-10px;
   right:175px;
-  background-color: rgba(61, 59, 57, 0.85);
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
   visibility: hidden;
   transform: translateX(50px);
@@ -77,6 +77,9 @@
   transition-duration: 350ms;
   transition-delay:350ms;
   opacity: 0;
+  // height: 100%;
+  // max-height: 300px;
+  // overflow-y:scroll;
 
   &__title {
     position: relative;

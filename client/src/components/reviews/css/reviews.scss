@@ -1,24 +1,17 @@
 .review {
-  max-width: 1000px;
-  margin:auto;
-
   &__container {
     display: flex;
     justify-content: space-around;
     margin-bottom: 50px;
+    gap:50px;
   }
 
   &__rating , &__submit{
-    width: 400px;
+    width: 350px;
     padding:20px;
     border-radius: 5px;
-    // background-color: rgba(58, 56, 56, 0.24);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
-  }
-
-  &__title {
-    padding:50px;
-    text-align: center;
+    // box-shadow: 0 2px 4px 0 rgba(177, 174, 174, 0.2), 0 3px 10px 0 rgba(192, 190, 190, 0.493);
   }
 
   &__aveRating {
@@ -74,11 +67,37 @@ input[type="radio"] {
   margin-bottom: 15px;
 }
 .submitReview{
-    border: 1px solid var(--clr-grey-2);
+  border: 1px solid var(--clr-grey-2);
   padding: 10px;
   box-shadow: 0 0 20px #00c4c4;
 }
 
 #textArea {
   min-height:100px ;
+}
+
+@media screen and (max-width:750px) {
+  .review__container{
+    flex-direction: column;
+  }
+}
+
+.progress {
+  height:1.25rem !important;
+  border-radius:5px ;
+}
+
+.progressLabel{
+  color:rgb(129, 127, 127);
+  font-size: 12px;
+  font-weight: 100;
+}
+.seeReviewBtn{
+  color:black;
+  padding:5px 10px;
+  outline: 1px solid rgba(143, 112, 234, 0.479);
+  outline-offset: -3px;
+  border:none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.148), 0 6px 20px 0 rgba(68, 67, 67, 0.411);
 }

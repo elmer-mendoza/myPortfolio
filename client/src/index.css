@@ -129,4 +129,20 @@ p {
   }
 }
 
+.sectionContainer {
+  max-width: 1000px;
+  margin:auto;
+  padding:25px;
+}
+
+.sectionTitle {
+  color: rgb(139, 136, 136);
+  font-weight: 300;
+  /* text-align: center; */
+  padding:10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border-bottom: 3px solid rgb(205, 184, 50);
+  /* border-radius:10px; */
+}
 

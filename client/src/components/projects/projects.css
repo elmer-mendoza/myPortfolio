@@ -1,0 +1,67 @@
+.projects__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.project {
+  width: 275px;
+  height: 325px;
+  box-shadow: 0 2px 4px 0 rgba(177, 174, 174, 0.2), 0 3px 10px 0 rgba(192, 190, 190, 0.493);
+  padding: 5px;
+}
+.project__body {
+  margin-top: 5px;
+  border: 0.5px solid rgba(128, 128, 128, 0.511);
+  border-radius: 3px;
+}
+.project.card {
+  height: 100%;
+}
+.project__title {
+  color: rgb(205, 184, 50);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 100;
+}
+.project__card-img {
+  position: relative;
+  overflow: hidden;
+  margin-left: 0px !important;
+  width: 100%;
+}
+.project__desc {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+}
+.project__source-link {
+  background-color: rgba(208, 199, 128, 0.597);
+  border-radius: 0px 10px 10px 0;
+  box-shadow: 0 2px 4px 0 rgba(177, 174, 174, 0.2), 0 3px 10px 0 rgba(192, 190, 190, 0.493);
+  padding: 10px;
+  padding-top: 5px;
+  position: absolute;
+  left: -70%;
+  bottom: -10px;
+  z-index: 1;
+  transition: 0.6s;
+}
+.project__source-link a {
+  padding: 0.3rem;
+  color: rgb(250, 244, 244);
+  font-size: 35px;
+  transition: all 200ms ease-in-out;
+}
+.project__source-link a:hover {
+  font-size: 40px;
+}
+.project:hover .project__source-link {
+  left: 0px;
+}
+
+button {
+  border: none;
+  padding: 3px;
+  background-color: transparent;
+}/*# sourceMappingURL=projects.css.map */

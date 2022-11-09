@@ -1,0 +1,47 @@
+.boxContainer {
+  display: flex;
+  height: 500px;
+  width: 500px;
+  background-color: gray;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+}
+
+#sw-js-blob-svg {
+  height: 100%;
+  width: 100%;
+}
+
+.boxLeft {
+  height: 0px;
+  width: 0vw;
+  border-bottom: red 30px solid;
+  border-radius: 0% 100% 0% 8%/6% 100% 0% 100%;
+  border-right: 400px solid transparent;
+}
+
+.boxRight {
+  height: 0px;
+  width: 0vw;
+  margin-top: 10px;
+  border-bottom: red 20px solid;
+  border-radius: 0% 100% 0% 8%/6% 100% 0% 100%;
+  border-left: 600px solid transparent;
+}
+
+.boxLeft1 {
+  height: 0px;
+  width: 0vw;
+  border-bottom: red 30px solid;
+  border-right: 400px solid white;
+  border-bottom-left-radius: 50px;
+}
+
+.boxRight2 {
+  height: 0px;
+  width: 0vw;
+  margin-top: 10px;
+  border-bottom: rgba(255, 0, 0, 0.705) 20px solid;
+  border-left: 600px solid white;
+  border-bottom-right-radius: 50px;
+}/*# sourceMappingURL=education.css.map */
